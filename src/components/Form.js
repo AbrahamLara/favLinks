@@ -32,11 +32,21 @@ class Form extends Component {
     const { name, URL } = this.state;
 
     return (
-      <form onSubmit={this.onFormSubmit} onChange={this.handleChange}>
-        <label for="name"> Name:</label>
-        <input type="text" name="name" value={name} />
-        <label for="URL">URL:</label>
-        <input type="text" name="URL" value={URL} />
+      <form onSubmit={this.onFormSubmit}>
+        <label htmlFor="name">Name:</label>
+        <input
+          onChange={this.handleChange}
+          type="text"
+          name="name"
+          value={name}
+        />
+        <label htmlFor="URL">URL:</label>
+        <input
+          onChange={this.handleChange}
+          type="text"
+          name="URL"
+          value={URL}
+        />
         <input className="button" type="submit" />
       </form>
     );
