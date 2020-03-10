@@ -13,7 +13,7 @@ class LinkContainer extends React.Component {
 
   removeCharacter = index => {
     this.setState(({ favLinks }) => ({
-      favLinks: favLinks.filter((_, i) => i === index)
+      favLinks: favLinks.filter((_, i) => i !== index)
     }));
   };
 
@@ -30,7 +30,7 @@ class LinkContainer extends React.Component {
       <div className="container">
         <h1>My Favorite Links</h1>
         <p>Add a new url with a name and link to the table.</p>
-        <Table linkData={favLinks} />
+        <Table linkData={favLinks} removeLink={this.removeCharacter} />
 
         <br />
 
