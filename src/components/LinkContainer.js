@@ -35,7 +35,7 @@ class LinkContainer extends React.Component {
         <br />
 
         <h3>Add New</h3>
-        <Form />
+        <Form handleSubmit={this.handleSubmit} />
       </div>
     );
   }

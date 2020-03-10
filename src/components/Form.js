@@ -11,7 +11,7 @@ class Form extends Component {
   }
 
   handleChange = event => {
-    const { name, value } = event;
+    const { name, value } = event.target;
 
     this.setState({
       [name]: value
@@ -21,7 +21,7 @@ class Form extends Component {
   onFormSubmit = event => {
     event.preventDefault();
 
-    // Call props to handle submission
+    this.props.handleSubmit(this.state);
     this.setState({
       name: "",
       URL: ""
